@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\kevin\AndroidStudioProjects\ShadowApp\app\src\main\lib\junit.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="f7cf82c2c188e805e53a5525e2c1e055237770c6">
+        <dex dex="C:\Users\kevin\AndroidStudioProjects\ShadowApp\app\build\intermediates\pre-dexed\debug\junit-2c279a9939b2c9b5c8215113ce41d0eb0beab40d.jar" />
+    </item>
+    <item
+        jar="C:\Users\kevin\AndroidStudioProjects\ShadowApp\app\src\main\lib\metadata-extractor-2.3.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="9d51c7475c2ddaa812804127e4340a9431650f0f">
+        <dex dex="C:\Users\kevin\AndroidStudioProjects\ShadowApp\app\build\intermediates\pre-dexed\debug\metadata-extractor-2.3.1-ac0eeaa608cd4c0b00a1c34629691a8eee75cf61.jar" />
+    </item>
+    <item
+        jar="C:\Users\kevin\AndroidStudioProjects\ShadowApp\app\src\main\lib\Jama-1.0.2.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="10027ce1ef383e5c8b1d4f82eaa0dc8587647149">
+        <dex dex="C:\Users\kevin\AndroidStudioProjects\ShadowApp\app\build\intermediates\pre-dexed\debug\Jama-1.0.2-4542661e16a0c08b0e6c1158c6467d5aeca55646.jar" />
+    </item>
+
+</items>

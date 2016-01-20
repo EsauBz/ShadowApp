@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ombre</string>
+    <string-array name="latitude_refs">
+        <item>N</item>
+        <item>S</item>
+    </string-array>
+    <string-array name="longitude_refs">
+        <item>E</item>
+        <item>W</item>
+    </string-array>
+	<string name="latitude_ref">Reference Latitude</string>
+	<string name="longitude_ref">Reference Longitude</string>
+	<string name="menu_addface">Ajouter face</string>
+	<string name="menu_edit_horizon">Modifier la ligne d\'horizon</string>
+	<string name="menu_validate">Valider</string>
+	<string name="recompute_groups">Recalculer groupes</string>
+	<string name="expandToStreet">Agrandir à la rue</string>
+	<string name="shadowsOnWalls">Ombre sur le mur</string>
+	<string name="remove_last_face">Enlever la dernière face</string>
+	<string name="edit_last_face">Modifier la dernière face</string>
+	<string name="cancel_face">Annuler la face</string>
+	<string name="end_face">Terminer la face</string>
+	<string name="save_image">Sauvegarder l\'image</string>
+	<string name="return_home">Retour à l\'accueil</string>
+	<string name="special_dates">Dates spéciales</string>
+	<string name="time_evolution">Évolution au fil du temps</string>
+    <string-array name="time_step_type">
+        <item>Heures</item>
+        <item>Jours</item>
+        <item>Mois</item>
+    </string-array>
+	
+</resources>
