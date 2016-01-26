@@ -83,7 +83,9 @@ public class ImageInfos implements Serializable {
 	public Double getOrientation() {
 		return orientation;
 	}
-	
+	/**
+	 * @param orientation the orientation to set
+	 */
 	public void setOrientation(Double orientation) {
 		this.orientation = orientation;
 	}
