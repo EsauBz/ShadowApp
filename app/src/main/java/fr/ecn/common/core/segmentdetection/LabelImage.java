@@ -28,9 +28,9 @@ public class LabelImage {
 	/**
 	 * Method finding connected components
 	 *
-	 * @param 	img				a (n x r) matrix where connected components must be labelled
-	 * @param 	connectivity	if equals to 4, 4-connected elements computed. In ANY other case, 8-connected elements.
-	 * @return					a ConnectedObjects object containing img labels
+	 * @param img		a (n x r) matrix where connected components must be labelled
+	 * @param connectivity	if equals to 4, 4-connected elements computed. In ANY other case, 8-connected elements.
+	 * @return		a ConnectedObjects object containing img labels
 	 */
 	public static ConnectedObjects labelImage(int[][] img, int connectivity) {
 		int nrow = img.length ;
