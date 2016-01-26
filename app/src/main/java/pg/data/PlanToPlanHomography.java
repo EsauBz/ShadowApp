@@ -3,7 +3,6 @@ import Jama.Matrix;
 import Jama.SingularValueDecomposition;
 
 /**
- *
  * A class to compute an homography between two plans
  * @author Cedric Telegone, ECN 2010
  */
@@ -16,8 +15,6 @@ public class PlanToPlanHomography {
 	protected Point x2_;
 	protected Point x3_;
 	protected Point x4_;
-
-
 
 	/**
 	 * create a new plan to plan homography
@@ -40,9 +37,6 @@ public class PlanToPlanHomography {
 		this.x3_=x3_;
 		this.x4=x4;
 		this.x4_=x4_;
-
-
-
 	}
 
 	/**
@@ -60,7 +54,6 @@ public class PlanToPlanHomography {
 		Matrix A4=x4.A(x4_);
 
 		//2: Assemble the 4 2x9 matrix into A 8x9 matrix
-
 		double[][] mA=new double[9][9];
 		mA[0]=A1.getArray()[0];
 		mA[1]=A1.getArray()[1];
@@ -74,25 +67,21 @@ public class PlanToPlanHomography {
 			mA[8][i]=0;
 		}
 
-
-
-
+		//create a new matrix
 		Matrix A=new Matrix(mA);
 
+		//create a new Singular Value Decomposition
 		SingularValueDecomposition svd=new SingularValueDecomposition(A);
+
 		Matrix v=svd.getV();
 		double[] h=new double[9];
 		for(int i=0;i<9;i++){
 		h[i]=v.getArray()[i][8];
-
 		}
 
-
+		//create a new matrix
 		Matrix hMatrix=new Matrix(h,3);
-
-
 
 		return new Homography(hMatrix.transpose());
 	}
-
 }
