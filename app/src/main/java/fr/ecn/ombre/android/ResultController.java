@@ -56,7 +56,7 @@ public class ResultController implements Callable<Void> {
 	public Void call() throws ShadowDrawingException {
 		this.shadows = new LinkedList<ShadowDrawingFace>();
 		
-		// test si la geometrie n'est pas vide:
+		// test if geometry is'nt empty
 		if (this.imageInfos.getFaces().isEmpty()) {
 			throw new ShadowDrawingException("Vous devez rentrer au moins une face");
 		}
@@ -76,17 +76,16 @@ public class ResultController implements Callable<Void> {
 		this.sunPosition = sdf.getSunPosition();
 		
 		// =============================================================//
-		// CALCUL DE L'OMBRE //
+		// CALCUL OF THE SHADOW //
 		// =============================================================//
 		
-		// calcul proprement dit:
+		
 		for (ShadowDrawingFace f : faces) {
 
-			// premier calcul de l'ombre au sol, avec test si l'inclinaison du
-			// rayon n'est pas bonne.. ( pour cas limite ou pente rayon<pente
-			// fuyante==>bug!)
+			// First calcul for the shadow projected on the ground, we test if the position of the ray
+			// isn't good.. 
 			ShadowDrawingFace faceOmbre = shadowDrawing.drawShadow(f);
-			// si l'ombre n'est pas dans le bon sens, on s'arrete la.
+			// if the shadow isn't in the right position, we stop.
 			if (!faceOmbre.isOutside()) {
 				continue;
 			}
@@ -94,28 +93,26 @@ public class ResultController implements Callable<Void> {
 			this.shadows.add(f);
 			
 			/**
-			 * On ne fait la suite que si la case "wall" est cochée, autrement
-			 * dit, que si on veut voir l'ombre sur les murs
-			 * 
-			 * Si l'on a une seul face le calcul est innutile
+			 * We only make the next step if the "wall" case is checked
+			 * (it means only if the user wants to see the shadow on the wall)
+			 * if we have only one face, the calcul is useless
 			 */
 			if (shadowsOnWalls && imageInfos.getFaces().size() > 1) {
 				// on boucle sur les faces autres que f :
 				for (ShadowDrawingFace f2 : faces) {
 					if (f2 != f) {
-						// On calcule les points qui de l'ombre qui se
-						// retrouvent sur la face f2 de la géométrie, et
-						// on les met dans vectPointOmbreF2
+						// We make the calcul for the points which have their shadow on the face called "f2"
+						// we put them ina vector untitled "vectPointOmbreF2"
 						Couple[] vectPointOmbreF2 = shadowDrawing.calculOmbreMur(f, faceOmbre, f2);
 						List<ShadowDrawingFace> ombre = shadowDrawing.determinationOmbreMur(f, faceOmbre, f2, vectPointOmbreF2,
 								sdf.getCoupleSoleil());
 						this.shadows.addAll(ombre);
 					}
-				} // fin boucle sur autres faces que f
-			} else { // si pas de "wall", on rajoute juste l'ombre si elle est
+				} // end of the loop on an another face than f
+				} else { // if not "wall", we just add the shadow
 				this.shadows.add(faceOmbre);
-			} // fin if "wall"
-		} // fin boucle de départ sur les faces.
+			} // end if "wall"
+		} 
 		
 		//Expend shadows to street if requested
 		if (expendToStreet) {
