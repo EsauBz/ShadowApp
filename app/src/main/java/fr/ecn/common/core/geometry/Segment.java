@@ -35,11 +35,15 @@ public class Segment {
 	public Line getLine() {
 		return new Line(this.p1, this.p2);
 	}
-	
+	/**
+	 * @return the minimum abscissa between two points
+	 */
 	public double getXMin() {
 		return Math.min(p1.getX(), p2.getX());
 	}
-	
+	/**
+	 * @return the maximum abscissa between two points
+	 */
 	public double getXMax() {
 		return Math.max(p1.getX(), p2.getX());
 	}
