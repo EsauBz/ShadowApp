@@ -37,7 +37,11 @@ public class BitmapLoader {
 			return new ResizedBitmap(resizedBitmap, scale);
 		}
 	}
-	
+	/**
+	 * public static class ResizedBitmap
+	 * This class is used to resize a BitMap with wrong dimension
+	 * See it in the method above
+	 */
 	public static class ResizedBitmap {
 		public Bitmap bitmap;
 		public float scale;
