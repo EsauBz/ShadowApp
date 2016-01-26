@@ -10,7 +10,12 @@ import fr.ecn.common.core.image.ColorImage;
  * A class that contains methods to get an image from a bitmap and a bitmap from an image
  */
 public class BitmapConvertor {
-
+	/**
+	 * @author jerome
+ 	 * methods to get an image from a bitmap
+ 	 * @param bitmap type : Bitmap
+ 	 * @return an image with the same characteristics as bitmap
+ 	 */
 	public static ColorImage bitmapToImage(Bitmap bitmap) {
         int width  = bitmap.getWidth();
         int height = bitmap.getHeight();
@@ -21,6 +26,12 @@ public class BitmapConvertor {
         return image;
 	}
 	
+	/**
+	 * @author jerome
+ 	 * methods to get a bitmap from an image
+ 	 * @param image type : ColorImage
+ 	 * @return a Bitmap with the same characteristics as image
+ 	 */
 	public static Bitmap imageToBitmap(ColorImage image) {
 		return Bitmap.createBitmap(image.getData(), image.getWidth(), image.getHeight(), Bitmap.Config.ARGB_8888);
 	}
