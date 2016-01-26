@@ -9,7 +9,11 @@ import fr.ecn.common.core.image.filters.ColorToByte;
 import fr.ecn.common.core.image.filters.FloatToByte;
 
 public class ImageConvertor {
-	
+	/**
+	*method turn image into Byteimage
+	*@param image
+	*@return Byteimage
+	*/
 	public static ByteImage toByte(Image image) {
 		if (image instanceof ByteImage) {
 			return (ByteImage) image;
@@ -20,7 +24,11 @@ public class ImageConvertor {
 			throw new RuntimeException("Unsuported Image type");
 		}
 	}
-
+	/**
+	*method turn image into ColorImage only if image is an instance of ColorImage
+	*@param image
+	*@return Byteimage
+	*/
 	public static ColorImage toColor(Image image) {
 		if (image instanceof ColorImage) {
 			return (ColorImage) image;
