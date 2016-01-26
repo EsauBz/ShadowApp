@@ -5,16 +5,14 @@ import java.util.List;
 
 /**
  * A class to handle polygon as a list of points
- * 
  * @author Cedric Telegone, ECN 2010
- * 
  */
 public class Polygon {
 
 	protected List<Point> points;
 
 	/**
-	 *
+	 * Polygon's constructor without parameter
 	 */
 	public Polygon() {
 		points = new ArrayList<Point>();
@@ -22,9 +20,7 @@ public class Polygon {
 
 	/**
 	 * add a point to the current polygon
-	 * 
-	 * @param p
-	 *            a point
+	 * @param p, a point
 	 */
 	public void add(Point p) {
 		points.add(p);
@@ -32,8 +28,7 @@ public class Polygon {
 
 	/**
 	 * tell if the polygon is allowed to be drawn
-	 * 
-	 * @return
+	 * @return true if the polygon can be drawn
 	 */
 	public boolean drawable() {
 		boolean result = false;
@@ -42,12 +37,8 @@ public class Polygon {
 			for (int i = 0; i < points.size(); i++) {
 				if (!points.get(i).drawable)
 					result = false;
-
 			}
-
 		}
-
 		return result;
 	}
-
 }
