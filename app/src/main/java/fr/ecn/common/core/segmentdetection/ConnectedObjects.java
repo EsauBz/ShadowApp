@@ -18,8 +18,8 @@ public class ConnectedObjects {
 	/**
 	 * Public constructor
 	 * 
-	 * @param 	m		matrix containing elements with value 0 in the background and p(i,j)>0 in the foreground
-	 * @param 	num		the number of connected objects in the matrix
+	 * @param m	matrix containing elements with value 0 in the background and p(i,j)>0 in the foreground
+	 * @param num	the number of connected objects in the matrix
 	 */
 	public ConnectedObjects(int[][] m, int num){
 		this.matrix = m;
