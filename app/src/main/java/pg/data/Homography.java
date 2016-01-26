@@ -7,8 +7,6 @@ import Jama.Matrix;
 * @author Cedric Telegone, ECN 2010
 *
 */
-
-
 public class Homography {
 
 	protected Matrix h;
@@ -22,7 +20,7 @@ public class Homography {
 	}
 
 	/**
-	 *
+	 * Matrix's Getter
 	 * @return the matrix homography
 	 */
 	public Matrix getH(){
@@ -46,7 +44,5 @@ public class Homography {
 
 		return new Homography(h.inverse());
 	}
-
-
 
 }
