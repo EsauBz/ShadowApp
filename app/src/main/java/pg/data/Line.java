@@ -5,7 +5,6 @@ package pg.data;
 * @author Cedric Telegone, ECN 2010
 *
 */
-
 public class Line{
 	protected Vector coord;
 
@@ -13,14 +12,15 @@ public class Line{
 	 * create new line from a vector
 	 * @param v a vector
 	 */
-
 	public Line(Vector v){
 		coord=v;
 	}
 
 	/**
 	 * create new line from 3 doubles
-	 *
+	 * @param a
+	 * @param b
+	 * @param c
 	 */
 	public Line(double a, double b, double c) {
 		coord=new Vector(a,b,c);
@@ -29,7 +29,7 @@ public class Line{
 	/**
 	 * tell if the line contains a Point
 	 * @param p the Point to test
-	 * @return
+	 * @return true if the line contains a Point
 	 */
 	public boolean contains(Point p){
 		return p.liesOn(this);
@@ -39,20 +39,20 @@ public class Line{
 	/**
 	 * tell if a line is equal to a second one
 	 * @param l the second line
-	 * @return
+	 * @return true if the line equals l
 	 */
 	 public boolean equals(Line l){
 		return coord.equals(l.getVec());
 	}
 
 	 /**
+	  * Vector's Getter
 	  * get the vector of coordinates
-	  *
 	  */
-
 	public Vector getVec(){
 		return coord;
 	}
+
 	/**
 	 * get the intersection Point of the line with a second one
 	 * @param l the second line
@@ -63,25 +63,21 @@ public class Line{
 		result.normalize();
 		return result;
 	}
+
 	/**
 	 * get the intersection Point of the line with a second one
 	 * @param l the second line
 	 * @return Point intersection point
 	 */
-
 	public Point cross(Line l){
 		return this.intersect(l);
 	}
 
 	/**
 	 * print coordinates
-	 *
 	 */
-
 	public void print(){
 		coord.print();
 	}
-
-
 
 }
