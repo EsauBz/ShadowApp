@@ -11,9 +11,6 @@ import java.io.Serializable;
  */
 public class Coordinate implements Serializable {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	protected double degrees;
@@ -139,7 +136,12 @@ public class Coordinate implements Serializable {
 			throw new IllegalArgumentException("Invalid coordinate String");
 		}
 	}
-	
+	/**
+	 * Change the format of the Coordinate object.
+	 * @param reference
+	 * @param coordinate to change.
+	 * @return the Coordinate object in degrees, minutes and seconds
+	 */
 	public static Coordinate fromDouble(double coordinate, String reference) {
 		double degrees = (int) coordinate;
 		coordinate -= degrees;
