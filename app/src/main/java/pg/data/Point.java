@@ -4,9 +4,7 @@ import Jama.Matrix;
 
 /**
  * A class to handle Points in projective geometry
- * 
  * @author Cedric Telegone, ECN 2010
- * 
  */
 public class Point {
 	protected Vector coord;
@@ -15,27 +13,24 @@ public class Point {
 
 	/**
 	 * create a new Point from a vector
-	 * 
-	 * @param v
-	 *            vector of coordinates
+	 * @param v vector of coordinates
 	 */
 	public Point(Vector v) {
 		this.coord = v;
 	}
 
 	/**
-	 * 
+	 * create a new Point from 2 doubles (plan representation)
 	 * @param x
 	 * @param y
 	 */
 	public Point(double x, double y) {
-		// construction de la repr�sentation homog�ne d'un point � partir de sa
-		// repr�sentation inhomog�ne
+		// creates the homogeneous representation from the inhomogeneous one
 		coord = new Vector(x, y);
 	}
 
 	/**
-	 * 
+	 * create a new Point from 3 doubles (spatial representation)
 	 * @param x
 	 * @param y
 	 * @param z
@@ -45,24 +40,22 @@ public class Point {
 	}
 
 	/**
-	 * 
-	 * @return
+	 * Vector's Getter
+	 * @return vector's coordinates
 	 */
-
 	public Vector getVec() {
 		return coord;
 	}
 
 	/**
-	 * allow a Point to be drawn
+	 * Point's drawing is allowed
 	 */
-
 	public void drawable() {
 		drawable = true;
 	}
 
 	/**
-	 * avoid a Point to being drawn
+	 * Point's drawing is not allowed
 	 */
 	public void notDrawable() {
 		drawable = false;
@@ -70,33 +63,31 @@ public class Point {
 
 	/**
 	 * tell if a Point is going to be drawn
-	 * 
-	 * @return
+	 * @return true if the Point is going to be drawn
 	 */
-
 	public boolean isDrawable() {
 		return drawable;
 	}
 
 	/**
-	 * 
-	 * @return
+	 * X coordinate's Getter
+	 * @return X
 	 */
 	public double getX() {
 		return coord.getX();
 	}
 
 	/**
-	 * 
-	 * @return
+	 * Y coordinate's Getter
+	 * @return Y
 	 */
 	public double getY() {
 		return coord.getY();
 	}
 
 	/**
-	 * 
-	 * @return
+	 * Z coordinate's Getter
+	 * @return Z
 	 */
 	public double getZ() {
 		return coord.getZ();
@@ -111,10 +102,7 @@ public class Point {
 
 	/**
 	 * tell if the Point belongs to a specified line
-	 * 
-	 * @param l
-	 *            the line that may contain the Point
-	 * 
+	 * @param l the line that may contain the Point
 	 */
 	public boolean liesOn(Line l) {
 		if (coord.scalar(l.getVec()) == 0)
@@ -124,10 +112,10 @@ public class Point {
 	}
 
 	/**
-	 * 
-	 * @param s
-	 * @param t
-	 * @return
+	 * tell if a segment and a double are aligned
+	 * @param s, a segment
+	 * @param t, a double
+	 * @return true if there are aligned
 	 */
 	public boolean aligned(SegmentPG s, double t) {
 		if (Math.abs(angle(s)) > 1 - t) {
@@ -139,11 +127,10 @@ public class Point {
 	}
 
 	/**
-	 * 
-	 * @param s
-	 * @return
+	 * give an angle
+	 * @param s, a segment
+	 * @return the angle
 	 */
-
 	public double angle(SegmentPG s) {
 		double xa = coord.getX() - s.getP1().getX();
 		double ya = coord.getY() - s.getP1().getY();
@@ -160,18 +147,17 @@ public class Point {
 
 	/**
 	 * get a Line from 2 points (current point and parameter point)
-	 * 
-	 * @param p
-	 *            second point
-	 * @return l computed line
+	 * @param p, the second point
+	 * @return l the computed line
 	 */
 	public Line cross(Point p) {
 		return new Line(coord.normalize().cross(p.getVec().normalize()));
 	}
 
 	/**
-	 * get the distance from a point
-	 * 
+	 * give the distance from a point p
+	 * @param p, the point
+	 * @return the distance
 	 */
 	public double distance(Point p) {
 		return coord.distance(p.getVec());
@@ -186,9 +172,7 @@ public class Point {
 
 	/**
 	 * Get the image of the point through an homography
-	 * 
-	 * @param h
-	 *            the homography
+	 * @param h, the homography
 	 * @return the image point
 	 */
 	public Point homography(Homography h) {
@@ -204,14 +188,11 @@ public class Point {
 	}
 
 	/**
-	 * 
 	 * A Matrix between two point, specified by Zisserman in
 	 * "Multiple view geometry in computer vision"
-	 * 
-	 * @param p
+	 * @param p, a point
 	 * @return
 	 */
-
 	public Matrix A(Point p) {
 
 		// Le point courant est x, p est le point x'
@@ -243,7 +224,6 @@ public class Point {
 
 	/**
 	 * transform into a pixel
-	 * 
 	 * @return the pixel
 	 */
 	public Pixel toPixel() {
