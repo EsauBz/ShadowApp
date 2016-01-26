@@ -8,18 +8,19 @@ package fr.ecn.common.core.geometry;
 public class Line {
 
 	// =============================================================================//
-	// Attributs:
-	// on représente les droites non verticales par l'equation y=ax+b,
-	// les attributs d'une droite seront donc les coefficients a et b.
+	// Attributes:
+	// We have represented the non-vertical lines with the equation y=ax+b
+	// 
+	// Line's attributes will be coefficients a and b.
 	// =============================================================================//
 	protected double a;
 	protected double b;
 
 	// =============================================================================//
-	// Constructeurs
+	// Constructors
 	// =============================================================================//
 	/**
-	 * Construction d'une droite a partir de deux points
+	 * Construction of a line from two points
 	 * 
 	 * @param P1
 	 * @param P2
@@ -30,7 +31,7 @@ public class Line {
 	}
 
 	/**
-	 * Constructeur de base: droite horizontale passant par (0,0).
+	 * base constructor :  horizontale line passing through (0,0).
 	 */
 	public Line() {
 		this.a = 0;
@@ -38,7 +39,7 @@ public class Line {
 	}
 
 	/**
-	 * Constructeur a partir des coefficients a et b :
+	 * Constructor with a and b :
 	 */
 	public Line(double a, double b) {
 		this.a = a;
@@ -60,11 +61,10 @@ public class Line {
 	}
 
 	/**
-	 * Calcul de y l'ordonné d'un point appartenant à la droite et d'abscisse x.
-	 * Retourne le point obtenu
+	 * Calculation of y the ordinate of a point on the straight line and the abscissa x .
 	 * 
 	 * @param x
-	 * @return le point
+	 * @return a point
 	 */
 	public Point calculY(double x) {
 		double y = this.a * x + this.b;
@@ -72,11 +72,10 @@ public class Line {
 	}
 
 	/**
-	 * Calcul de x l'abscisse d'un point appartenant à la droite et d'ordonnée
-	 * y. Retourne le point obtenu
+	 * Calculating x the abscissa of a point belonging to the right and y-coordinate . 
 	 * 
 	 * @param y
-	 * @return le point
+	 * @return a point
 	 */
 
 	public Point calculX(double y) {
@@ -84,9 +83,9 @@ public class Line {
 		if (this.a != 0) {
 			x = 1 / (this.a) * (y - this.b);
 		}
-		// Dans le cas ou a=0, on a une droite horizontale,
-		// on peut alors avoir n'importe quelle valeur de x, on choisit
-		// arbitrairement 0.
+		// In the case where a=0, we have a horizontal line,
+		// so we can have any x values, we choose
+		// arbitrarily 0.
 		return new Point(x, y);
 	}
 
