@@ -90,7 +90,9 @@ public class SegmentDetection {
 			}
 		}
 	}
-
+	/**
+	 * TODO write commentaries
+	 **/
 	private void addSegment(List<Edgel> edgels) {
 
 		double meanX = 0;
