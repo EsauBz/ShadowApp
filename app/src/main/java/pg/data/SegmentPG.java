@@ -2,9 +2,7 @@ package pg.data;
 
 /**
  * A class to handle segments in projective geometry
- * 
  * @author Cedric Telegone, ECN 2010
- * 
  */
 public class SegmentPG {
 	protected Point p1;
@@ -12,11 +10,8 @@ public class SegmentPG {
 
 	/**
 	 * create a new SegmentPG from 2 points
-	 * 
-	 * @param p1
-	 *            - first point
-	 * @param p2
-	 *            - second point
+	 * @param p1, the first point
+	 * @param p2, the second point
 	 */
 	public SegmentPG(Point p1, Point p2) {
 
@@ -33,29 +28,25 @@ public class SegmentPG {
 	}
 
 	/**
-	 * get the first segment point
-	 * 
-	 * @return
+	 * P1's Getter (get the first segment point)
+	 * @return P1
 	 */
 	public Point getP1() {
 		return p1;
 	}
 
 	/**
-	 * get the second segment point
-	 * 
-	 * @return
+	 * P2's Getter (get the second segment point)
+	 * @return P2
 	 */
 	public Point getP2() {
 		return p2;
 	}
 
 	/**
-	 * 
-	 * @param s
-	 * @return
+	 * give the distance of the nearest point (P1 or P2)
+	 * @return this distance
 	 */
-
 	public double distance(SegmentPG s) {
 		double d1 = Math.min(p1.distance(s.getP1()), p1.distance(s.getP2()));
 		double d2 = Math.min(p2.distance(s.getP1()), p2.distance(s.getP2()));
