@@ -14,9 +14,8 @@ public class Group {
 	protected Point centroid;
 	protected int color;
 
-
 	/**
-	 *
+	 * constructor of Group without parameters
 	 */
 	public Group(){
 		segments=new ArrayList<SegmentPG>();
@@ -26,7 +25,6 @@ public class Group {
 	 * set the centroid of this group
 	 * @param p the centroid
 	 */
-
 	public void setCentroid(Point p){
 		centroid=p;
 	}
@@ -69,9 +67,8 @@ public class Group {
 		double ya=a.getY();
 		double yb=b.getY();
 		double temp=0;
-		if(xb>xa&&yb>ya){
-
-		}else
+		if(xb>xa&&yb>ya){}
+		else
 		{
 			if(xb<xa)
 			{
@@ -79,38 +76,23 @@ public class Group {
 				xa=xb;
 				xb=temp;
 			}
-
 			if(yb<ya)
 			{
 			temp=ya;
 			ya=yb;
 			yb=temp;
 			}
-
 		}
-
 		while(!finished){
-		for(int i=0;i<segments.size();i++){
-			if(i==segments.size()-1)
-				finished=true;
+			for(int i=0;i<segments.size();i++){
+				if(i==segments.size()-1)
+					finished=true;
 
-
-			if((segments.get(i).getP1().getX()>xa&&segments.get(i).getP1().getX()<xb&&segments.get(i).getP1().getY()>ya&&segments.get(i).getP1().getY()<yb)||(segments.get(i).getP2().getX()>xa&&segments.get(i).getP2().getX()<xb&&segments.get(i).getP2().getY()>ya&&segments.get(i).getP2().getY()<yb)){
-
-				segments.remove(i);
-				break;
-
+				if((segments.get(i).getP1().getX()>xa&&segments.get(i).getP1().getX()<xb&&segments.get(i).getP1().getY()>ya&&segments.get(i).getP1().getY()<yb)||(segments.get(i).getP2().getX()>xa&&segments.get(i).getP2().getX()<xb&&segments.get(i).getP2().getY()>ya&&segments.get(i).getP2().getY()<yb)){
+					segments.remove(i);
+					break;
+				}
 			}
-
-
 		}
-
-
-		}
-
 	}
-
-
-
-
 }
