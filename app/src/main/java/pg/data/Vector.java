@@ -3,7 +3,6 @@ package pg.data;
 /**
  * A class to handle homogenous vectors in projective geometry
  * @author Cedric Telegone, ECN 2010
- *
  */
 public class Vector{
 
@@ -12,7 +11,7 @@ public class Vector{
 	protected double z;
 
 	/**
-	 *
+	 * Constructor without parameter (Create a null vector)
 	 */
 	public Vector(){
 		x=0;
@@ -21,7 +20,7 @@ public class Vector{
 	}
 
 	/**
-	 *
+	 * Copy constructor (superficial copy in the space)
 	 * @param x
 	 * @param y
 	 * @param z
@@ -33,7 +32,7 @@ public class Vector{
 	}
 
 	/**
-	 *
+	 * Copy constructor (superficial copy in the plan)
 	 * @param x
 	 * @param y
 	 */
@@ -45,8 +44,8 @@ public class Vector{
 	}
 
 	/**
-	 *
-	 * @return
+	 * X's Getter
+	 * @return X coordinate
 	 */
 	public double getX() {
 		return x;
@@ -54,7 +53,7 @@ public class Vector{
 
 	/**
 	 * to normalize the vector (z=1)
-	 * @return
+	 * @return the vector normalized
 	 */
 	public Vector normalize(){
 		if(z==0)
@@ -64,39 +63,40 @@ public class Vector{
 	}
 
 	/**
-	 *
-	 * @param x
+	 * X's Setter
+	 * @param x coordinate
 	 */
 	public void setX(double x) {
 		this.x = x;
 	}
 
 	/**
-	 *
-	 * @return
+	 * Y's Getter
+	 * @return y coordinate
 	 */
 	public double getY() {
 		return y;
 	}
 
 	/**
-	 *
-	 * @param y
+	 * Y's Setter
+	 * @param y coordinate
 	 */
 	public void setY(double y) {
 		this.y = y;
 	}
+
 	/**
-	 *
-	 * @param z
+	 * Z's Setter
+	 * @param z coordinate
 	 */
 	public void setZ(double z) {
 		this.z = z;
 	}
 
 	/**
-	 *
-	 * @return
+	 * Z's Getter
+	 * @return z coordinate
 	 */
 	public double getZ() {
 		return z;
@@ -105,8 +105,8 @@ public class Vector{
 
 	/**
 	 * test the equality of homogeneous vectors
-	 * @param p
-	 * @return
+	 * @param p, an homogeneous vector
+	 * @return true if p equals to the this.vector
 	 */
 	public boolean equals(Vector p){
 		this.normalize();
@@ -119,21 +119,19 @@ public class Vector{
 
 	/**
 	 * scalar product
-	 * @param v
-	 * @return
+	 * @param v, a vector
+	 * @return a scalar
 	 */
 	public double scalar(Vector v){
 		double result;
-
-
 		result=x*v.getX()+y*v.getY()+z*v.getZ();
 		return result;
 	}
 
 	/**
 	 * distance fonction
-	 * @param v
-	 * @return
+	 * @param v, a vector
+	 * @return a distance
 	 */
 	public double distance(Vector v){
 		if(z==0||v.getZ()==0)
@@ -142,15 +140,13 @@ public class Vector{
 			double dX=x/z-v.getX()/v.getZ();
 			double dY=y/z-v.getY()/v.getZ();
 			return Math.sqrt(dX*dX+dY*dY);
-
 		}
-
 	}
 
 	/**
 	 * cross product (product of vectors)
-	 * @param v
-	 * @return
+	 * @param v, a vector
+	 * @return a cross product
 	 */
 	public Vector cross(Vector v){
 		Vector result=new Vector();
@@ -166,6 +162,5 @@ public class Vector{
 	public void print(){
 		System.out.println("["+x+" "+y+" "+z+"]");
 	}
-
 
 }
