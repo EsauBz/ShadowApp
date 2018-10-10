@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fr.ecn.ombre.android"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="4"
+        android:targetSdkVersion="4" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:debuggable="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:testOnly="true" >
+        <activity
+            android:name="fr.ecn.ombre.android.OmbreActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="fr.ecn.ombre.android.ImageInfosActivity" />
+        <activity android:name="fr.ecn.ombre.android.FacesActivity" />
+        <activity android:name="fr.ecn.ombre.android.VanishingPointsActivity" />
+        <activity android:name="fr.ecn.ombre.android.OptionsActivity" />
+        <activity android:name="fr.ecn.ombre.android.FacesSimpleActivity" />
+        <activity android:name="fr.ecn.ombre.android.ResultActivity" />
+        <activity android:name="fr.ecn.ombre.android.HorizonActivity" />
+        <activity android:name="fr.ecn.ombre.android.SensorActivity" />
+        <activity android:name="fr.ecn.ombre.android.HorizonChoiceActivity" />
+        <activity android:name="fr.ecn.ombre.android.FacesChoiceActivity" />
+
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="fr.ecn.ombre.android.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>
