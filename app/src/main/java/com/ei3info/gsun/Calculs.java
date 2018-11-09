@@ -3,9 +3,10 @@ package com.ei3info.gsun;
 /**
  * class referring to Solar Azimuth and Solar Height
  */
-public class 	Calculs {
+public class Calculs {
 
 	//this class depends on the user position and the date
+	/** Variable that indicates the long and lat of the user **/
 	private PositionUtilisateur position;
 	private Temps date;
 
@@ -113,9 +114,9 @@ public class 	Calculs {
 	 */
 	public double majorationHoraire(){
 		double offset = 0;
-		if (date.mois == 7 || date.mois == 8 || date.mois == 6 && date.jour >=21 || date.mois == 9 && date.jour <=21){
+		if (date.mois == 7 || date.mois == 8 || date.mois == 6 && date.getJour() >=21 || date.mois == 9 && date.getJour() <=21){
 			offset = 1;
-		} else if (date.mois == 11 || date.mois == 12 || date.mois == 1 || date.mois == 2 || date.mois == 3 && date.jour <=21){
+		} else if (date.mois == 11 || date.mois == 12 || date.mois == 1 || date.mois == 2 || date.mois == 3 && date.getJour() <=21){
 			offset = 0;
 		} else {offset=1;}
 		

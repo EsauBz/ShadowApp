@@ -288,7 +288,7 @@ public class CannyDericheFilter {
 	 *@param  ang   the angle gradient image
 	 *@return       the image with non local-maxima suppressed
 	 */
-	FloatImage nonMaximalSuppression(int la, int ha) {
+	public FloatImage nonMaximalSuppression(int la, int ha) {
 		FloatImage res = new FloatImage(la, ha);
 
 		double ag;

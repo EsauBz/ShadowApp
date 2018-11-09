@@ -35,7 +35,7 @@ public class Face implements Serializable {
 	 * @param complete
 	 */
 	public Face(boolean complete) {
-		super();
+		//super();
 		this.points = new ArrayList<Point>();
 		this.complete = complete;
 	}

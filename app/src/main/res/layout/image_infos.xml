@@ -18,6 +18,20 @@
 	</LinearLayout>
     <TextView android:layout_height="wrap_content" android:text="Orientation" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:id="@+id/textView3"></TextView>
     <EditText android:layout_height="wrap_content" android:layout_width="fill_parent" android:inputType="numberDecimal" android:id="@+id/image_infos_orient"></EditText>
-    <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@android:string/ok" android:layout_gravity="center" android:id="@+id/image_infos_ok"></Button>
-    
+
+	<Button
+		android:id="@+id/image_infos_ok"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:text="@android:string/ok"></Button>
+
+	<Button
+		android:id="@+id/image_infos_map"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:text="Utiliser la Carte" />
+
+
 </LinearLayout>

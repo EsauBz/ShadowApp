@@ -50,6 +50,7 @@ public class ImageInfosActivity extends Activity {
 		longitudeRefSpinner.setAdapter(longitudeAdapter);
 		
 		Button okButton = (Button) findViewById(R.id.image_infos_ok);
+		Button mapButton = (Button) findViewById(R.id.image_infos_map);
 		
 		Bundle extras = getIntent().getExtras();
 		final ImageInfos imageInfos = (ImageInfos) extras.getSerializable("ImageInfos");
@@ -137,6 +138,11 @@ public class ImageInfosActivity extends Activity {
 				}
 			}
 		});
+		/** Intento de Mapa  **/
+
+
+
+		  /**Fin de intento de Mapa **/
 	}
 
 	protected void alertBox(String message) {

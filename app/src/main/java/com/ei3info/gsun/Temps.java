@@ -9,7 +9,8 @@ public class Temps {
 	public double heure;//hour
 
 	/**
-	 * constructor with day and month parameters
+	 * constructor with day and month parameters, the heure parameter its initialise in 0.
+	 * Also calls the super constructor
 	 * @param jour the day
 	 * @param mois the month
 	 */

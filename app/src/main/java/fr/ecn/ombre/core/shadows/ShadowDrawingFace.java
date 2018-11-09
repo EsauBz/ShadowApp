@@ -98,7 +98,9 @@ public class ShadowDrawingFace implements Serializable {
 	}
 
 	/**
-	 * @param couples
+	 *
+	 * @param couple1
+	 * @param couple2
 	 * @param isBuilding
 	 */
 	public ShadowDrawingFace(Couple couple1, Couple couple2, boolean isBuilding) {

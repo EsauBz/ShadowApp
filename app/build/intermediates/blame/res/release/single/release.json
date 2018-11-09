@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\release\\layout_select_date.xml.flat",
+        "source": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\src\\main\\res\\layout\\select_date.xml"
+    },
+    {
+        "merged": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_icon.png.flat",
+        "source": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\src\\main\\res\\drawable-mdpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\release\\layout_image_infos.xml.flat",
+        "source": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\src\\main\\res\\layout\\image_infos.xml"
+    },
+    {
+        "merged": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\release\\layout_select_face_type.xml.flat",
+        "source": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\src\\main\\res\\layout\\select_face_type.xml"
+    },
+    {
+        "merged": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\release\\layout_horizon_choice.xml.flat",
+        "source": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\src\\main\\res\\layout\\horizon_choice.xml"
+    },
+    {
+        "merged": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\release\\layout_result.xml.flat",
+        "source": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\src\\main\\res\\layout\\result.xml"
+    },
+    {
+        "merged": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\release\\layout_computing.xml.flat",
+        "source": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\src\\main\\res\\layout\\computing.xml"
+    },
+    {
+        "merged": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\release\\layout_select_time_step.xml.flat",
+        "source": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\src\\main\\res\\layout\\select_time_step.xml"
+    },
+    {
+        "merged": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\release\\layout_vanishing_points.xml.flat",
+        "source": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\src\\main\\res\\layout\\vanishing_points.xml"
+    },
+    {
+        "merged": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\release\\layout_sensor.xml.flat",
+        "source": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\src\\main\\res\\layout\\sensor.xml"
+    },
+    {
+        "merged": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_icon.png.flat",
+        "source": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\src\\main\\res\\drawable-ldpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\release\\layout_faces_choice.xml.flat",
+        "source": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\src\\main\\res\\layout\\faces_choice.xml"
+    },
+    {
+        "merged": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\release\\layout_image.xml.flat",
+        "source": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\src\\main\\res\\layout\\image.xml"
+    },
+    {
+        "merged": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_icon.png.flat",
+        "source": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\src\\main\\res\\drawable-hdpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\release\\layout_main.xml.flat",
+        "source": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\src\\main\\res\\layout\\main.xml"
+    }
+]

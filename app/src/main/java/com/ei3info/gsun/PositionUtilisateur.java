@@ -12,8 +12,8 @@ public class PositionUtilisateur {
 
 	/**
 	 * constructor with latitude and longitude parameters
-	 * @param lat
-	 * @param lon
+	 * @param lat double with the latitude
+	 * @param lon double with the longitude
 	 */
 	public PositionUtilisateur(double lat, double lon){
 		this.latitude = lat;

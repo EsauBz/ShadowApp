@@ -144,7 +144,7 @@ public class HorizonActivity extends Activity implements View.OnTouchListener {
 	 */
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
-		menu.findItem(MENU_LOCK_UNLOCK).setEnabled(this.locked);
+		menu.findItem(MENU_LOCK_UNLOCK).setEnabled(this.locked);  //this.locked
 		return super.onPrepareOptionsMenu(menu);
 	}
 

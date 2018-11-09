@@ -49,8 +49,7 @@ public class FacesActivity extends Activity implements OnTouchListener {
 				.getSerializable("ImageInfos");
 		this.imageInfos = imageInfos;
 
-		this.controller = (FacesController) this
-				.getLastNonConfigurationInstance();
+		this.controller = (FacesController) this.getLastNonConfigurationInstance();
 		
 		if (this.controller == null) {
 			this.setContentView(R.layout.computing);
