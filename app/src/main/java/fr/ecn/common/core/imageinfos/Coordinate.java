@@ -61,6 +61,21 @@ public class Coordinate implements Serializable {
 	}
 	
 	/**
+	 * Return the decimal degrees representation of this coordinate comme string.
+	 *
+	 * @return
+	 */
+	public String getDD() {
+		double deg = this.degrees + this.minutes/60 + this.seconds/3600;
+		String degrees = String.valueOf(deg);
+		if (this.ref.equals("W") || this.ref.equals("S")) {
+			degrees = "-" + degrees;
+		}
+		return degrees;
+	}
+
+	
+	/**
 	 * Return the DMS representation of this coordinate as a string
 	 * 
 	 * @return
