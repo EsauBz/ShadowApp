@@ -70,12 +70,12 @@ public class ImageInfosActivity extends Activity {
 				imageInfosDb.loadInfos(imageInfos);
 			}
 			if (imageInfos.getLatitude() != null) {
-				editLat.setText(imageInfos.getLatitude().getDMSString());
+				editLat.setText(imageInfos.getLatitude().getDD());
 				latitudeRefSpinner.setSelection(latitudeAdapter.getPosition(imageInfos.getLatitude().getRef()));
 			}
 	    	
 	    	if (imageInfos.getLongitude() != null) {
-	    		editLong.setText(imageInfos.getLongitude().getDMSString());
+	    		editLong.setText(imageInfos.getLongitude().getDD());
 				longitudeRefSpinner.setSelection(longitudeAdapter.getPosition(imageInfos.getLongitude().getRef()));
 	    	}
 	    	
