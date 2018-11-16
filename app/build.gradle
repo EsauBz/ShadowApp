@@ -4,7 +4,7 @@ android {
     buildToolsVersion '28.0.2'
 
     defaultConfig {
-        minSdkVersion 4
+        minSdkVersion 14
         targetSdkVersion 28
     }
 
@@ -21,5 +21,8 @@ dependencies {
     compile files('src/main/lib/Jama-1.0.2.jar')
     compile files('src/main/lib/metadata-extractor-2.3.1.jar')
     compile files('src/main/lib/junit.jar')
-
+    compile 'com.android.support:appcompat-v7:28.0.0'
+    compile 'com.android.support:support-v4:28.0.0'
+    compile 'com.android.support:design:28.0.0'
+    compile 'org.osmdroid:osmdroid-android:5.4.1:release@aar'
 }

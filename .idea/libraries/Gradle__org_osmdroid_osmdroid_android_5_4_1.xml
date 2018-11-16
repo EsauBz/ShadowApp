@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.osmdroid:osmdroid-android-5.4.1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/osmdroid-android-5.4.1-release.aar/b2788a99a480bb05f289992384d78cbb/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/osmdroid-android-5.4.1-release.aar/b2788a99a480bb05f289992384d78cbb/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

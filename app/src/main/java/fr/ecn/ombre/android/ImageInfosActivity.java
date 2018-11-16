@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import org.osmdroid.util.GeoPoint;
+
 import fr.ecn.common.core.imageinfos.Coordinate;
 import fr.ecn.common.core.imageinfos.ImageInfos;
 import fr.ecn.common.core.imageinfos.TemporaryImageInfos;
@@ -28,14 +30,21 @@ import fr.ecn.ombre.android.utils.ValidationException;
  */
 public class ImageInfosActivity extends Activity {
 
+	/**
+	 * Point correspondant à la localisation du projet
+	 */
+	private static GeoPoint point = null;
+
+
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.image_infos);
-		
-		final EditText editLat    = (EditText) findViewById(R.id.image_infos_lat);
-		final EditText editLong   = (EditText) findViewById(R.id.image_infos_long);
-		final EditText editOrient = (EditText) findViewById(R.id.image_infos_orient);
+
+         final EditText editLat    = (EditText) findViewById(R.id.image_infos_lat);
+         final EditText editLong   = (EditText) findViewById(R.id.image_infos_long);
+         final EditText editOrient = (EditText) findViewById(R.id.image_infos_orient);
 		
 		final Spinner latitudeRefSpinner = (Spinner) findViewById(R.id.image_infos_latitude_ref);
 		ArrayAdapter<CharSequence> latitudeAdapter = ArrayAdapter.createFromResource(
@@ -140,7 +149,14 @@ public class ImageInfosActivity extends Activity {
 		});
 		/** Intento de Mapa  **/
 
+		mapButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
 
+                popUp();
+
+			}
+		});
 
 		  /**Fin de intento de Mapa **/
 	}
@@ -148,4 +164,38 @@ public class ImageInfosActivity extends Activity {
 	protected void alertBox(String message) {
 		new AlertDialog.Builder(this).setTitle("Error").setMessage(message).setNeutralButton("Close", null).show(); 
 	}
+
+	/**
+	 * Lancement de la pop up de localisation
+	 */
+	public void popUp() {
+		CustomPopUp cdd = new CustomPopUp(ImageInfosActivity.this);
+		cdd.show();
+
+	}
+
+	public void misaJour(){
+
+        final EditText editLat    = (EditText) findViewById(R.id.image_infos_lat);
+        final EditText editLong   = (EditText) findViewById(R.id.image_infos_long);
+
+        editLat.setText(Double.toString(point.getLatitude()));
+        editLong.setText(Double.toString(point.getLongitude()));
+    }
+
+    /**
+     *
+     * @param p set the point in this activity to the one in parameter
+     */
+    public static void setPoint(GeoPoint p){
+         point = p;
+    }
+
+    /**
+     *
+     * @return point de long et lat
+     */
+    public static GeoPoint getPoint(){
+        return point;
+    }
 }
