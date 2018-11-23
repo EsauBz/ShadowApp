@@ -45,26 +45,26 @@ public class FacesActivity extends Activity implements OnTouchListener {
 		super.onCreate(savedInstanceState);
 
 		Bundle extras = getIntent().getExtras();
-		final ImageInfos imageInfos = (ImageInfos) extras
-				.getSerializable("ImageInfos");
+		final ImageInfos imageInfos = (ImageInfos) extras.getSerializable("ImageInfos");
 		this.imageInfos = imageInfos;
 
 		this.controller = (FacesController) this.getLastNonConfigurationInstance();
 		
 		if (this.controller == null) {
+
 			this.setContentView(R.layout.computing);
 			
-			new Thread(new Runnable() {
-				public void run() {
+			/* new Thread(new Runnable() {
+				public void run() { */
 					controller = new FacesController(imageInfos);
 					
-					runOnUiThread(new Runnable() {
-						public void run() {
+					/*runOnUiThread(new Runnable() {
+						public void run() {*/
 							setUp();
-						}
+						/*}
 					});
 				}
-			}).start();
+			}).start();  */
 		} else {
 			setUp();
 		}

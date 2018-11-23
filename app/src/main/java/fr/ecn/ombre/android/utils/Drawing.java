@@ -26,10 +26,10 @@ public class Drawing {
 	 * is green and show the possible future form of the face.
 	 */
 	public static void drawFace(Face face, Canvas canvas, Paint paint, boolean completed) {
-		
-		Point[] points = face.getPoints().toArray(new Point[0]);
+		//face.getPoints().add(new Point());
+		Point[] points = face.getPoints().toArray(new Point[1]);
 		Path path = new Path();
-		path.moveTo((float) points[0].getX(), (float) points[0].getY());
+		//path.moveTo((float) points[0].getX(), (float) points[0].getY());
 
 		if (completed = false) {
 			//we draw the unfinished face with a green line between the first point and the last selected one

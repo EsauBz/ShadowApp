@@ -42,8 +42,7 @@ public class FacesSimpleActivity extends Activity implements OnTouchListener {
 		super.onCreate(savedInstanceState);
 
 		Bundle extras = getIntent().getExtras();
-		final ImageInfos imageInfos = (ImageInfos) extras
-				.getSerializable("ImageInfos");
+		final ImageInfos imageInfos = (ImageInfos) extras.getSerializable("ImageInfos");
 		this.imageInfos = imageInfos;
 
 		this.controller = (FacesSimpleController) this.getLastNonConfigurationInstance();
