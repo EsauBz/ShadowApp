@@ -59,12 +59,18 @@ public class FaceExctractor {
 				p4 = this.farthestPoint(points, p3, p2);
 			}
 		}
-		
+
 		Face face = new Face();
 		face.getPoints().add(p1);
 		face.getPoints().add(p2);
 		face.getPoints().add(p3);
 		face.getPoints().add(p4);
+
+		System.out.println("///Point 1" + p1.toString());
+		System.out.println("///Point 2" + p2.toString());
+		System.out.println("///Point 3" + p3.toString());
+		System.out.println("///Point 4" + p4.toString());
+
 		return face;
 	}
 

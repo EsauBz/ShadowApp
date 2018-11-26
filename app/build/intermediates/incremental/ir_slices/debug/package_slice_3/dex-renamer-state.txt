@@ -1,4 +1,4 @@
-#Fri Nov 23 14:32:27 CET 2018
+#Mon Nov 26 14:47:28 CET 2018
 base.0=C\:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\3
 path.0=classes.dex
 renamed.0=classes.dex

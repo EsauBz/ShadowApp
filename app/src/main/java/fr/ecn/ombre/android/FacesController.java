@@ -76,8 +76,14 @@ public class FacesController {
 		if (this.currentLine.getState() != SCISSOR_STATE.HOLD) {
 			this.currentLine.endScissor();
 		}
-		
-		this.faces.add(this.convertLineToFace(this.currentLine));
+
+		Face face = this.convertLineToFace(this.currentLine);
+
+		if (face != null) {
+			this.faces.add(face);
+		}
+
+		//this.faces.add(this.convertLineToFace(this.currentLine));
 		
 		this.currentLine = null;
 	}

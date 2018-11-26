@@ -36,7 +36,7 @@ public class FacesActivity extends Activity implements OnTouchListener {
 	
 	protected ImageInfos imageInfos;
 	
-	protected FacesController controller;
+	protected volatile FacesController controller;
 	
 	protected Matrix matrix;
 
@@ -53,21 +53,23 @@ public class FacesActivity extends Activity implements OnTouchListener {
 		if (this.controller == null) {
 
 			this.setContentView(R.layout.computing);
-			
-			/* new Thread(new Runnable() {
-				public void run() { */
+
+			 new Thread(new Runnable() {
+				public void run() {
 					controller = new FacesController(imageInfos);
 					
-					/*runOnUiThread(new Runnable() {
-						public void run() {*/
+					runOnUiThread(new Runnable() {
+						public void run() {
 							setUp();
-						/*}
+						}
 					});
 				}
-			}).start();  */
+			}).start();
+
 		} else {
 			setUp();
 		}
+
 	}
 
 	/**
@@ -83,6 +85,7 @@ public class FacesActivity extends Activity implements OnTouchListener {
 		Drawable[] drawables = {new BitmapDrawable(this.controller.getBitmap()), new FacesDrawable(this.controller)}; 
 		imageView.setImageDrawable(new LayerDrawable(drawables));
 		imageView.setOnTouchListener(this);
+        invalidateOptionsMenu();
 	}
 
 	public boolean onTouch(View v, MotionEvent event) {
@@ -127,19 +130,22 @@ public class FacesActivity extends Activity implements OnTouchListener {
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		menu.clear();
-		
-		if (this.controller.isIdle()) {
-			// If the controller has at least one face stored
-			boolean hasFaces = this.controller.getFaces().size() > 0;
+		if(controller != null) {
 
-			menu.add(0, MENU_ADD_FACE, 0, R.string.menu_addface);
-			menu.add(0, MENU_REMOVE_LAST_FACE, 0, R.string.remove_last_face).setEnabled(hasFaces);
-			menu.add(0, MENU_VALIDATE, 0, R.string.menu_validate).setEnabled(hasFaces);
-		} else {
-			menu.add(0, MENU_END_FACE, 0, R.string.end_face);
-			menu.add(0, MENU_CANCEL_FACE, 0, R.string.cancel_face);
+			if (controller.isIdle()) {
+				// If the controller has at least one face stored
+				boolean hasFaces = this.controller.getFaces().size() > 0;
+
+				menu.add(0, MENU_ADD_FACE, 0, R.string.menu_addface);
+				menu.add(0, MENU_REMOVE_LAST_FACE, 0, R.string.remove_last_face).setEnabled(hasFaces);
+				menu.add(0, MENU_VALIDATE, 0, R.string.menu_validate).setEnabled(hasFaces);
+			} else {
+				menu.add(0, MENU_END_FACE, 0, R.string.end_face);
+				menu.add(0, MENU_CANCEL_FACE, 0, R.string.cancel_face);
+			}
 		}
-		return super.onPrepareOptionsMenu(menu);
+			return super.onPrepareOptionsMenu(menu);
+
 	}
 
 	@Override
@@ -168,6 +174,7 @@ public class FacesActivity extends Activity implements OnTouchListener {
 			this.controller.endFace();
 			
 			this.findViewById(R.id.image).invalidate();
+
 			
 			return true;
 		case MENU_CANCEL_FACE:
