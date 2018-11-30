@@ -32,6 +32,7 @@ import org.osmdroid.views.overlay.Polygon;
 import fr.ecn.ombre.android.R;
 
 
+
 public class CustomPopUp extends Dialog implements
         MapEventsReceiver, android.view.View.OnClickListener  {
 
@@ -113,6 +114,7 @@ public class CustomPopUp extends Dialog implements
             // to handle the case where the user grants the permission. See the documentation
             // for ActivityCompat#requestPermissions for more details.
         }
+
         Location lastLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
         //Initialisation

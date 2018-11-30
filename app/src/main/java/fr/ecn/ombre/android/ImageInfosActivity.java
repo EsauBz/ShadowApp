@@ -3,10 +3,15 @@
  */
 package fr.ecn.ombre.android;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -21,6 +26,8 @@ import fr.ecn.common.core.imageinfos.ImageInfos;
 import fr.ecn.common.core.imageinfos.TemporaryImageInfos;
 import fr.ecn.ombre.android.utils.ImageInfosDb;
 import fr.ecn.ombre.android.utils.ValidationException;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * An activity to check and edit the informations of the image
@@ -152,9 +159,7 @@ public class ImageInfosActivity extends Activity {
 		mapButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-
                 popUp();
-
 			}
 		});
 

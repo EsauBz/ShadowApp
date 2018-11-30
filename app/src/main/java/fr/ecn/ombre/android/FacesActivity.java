@@ -164,8 +164,6 @@ public class FacesActivity extends Activity implements OnTouchListener {
 		case MENU_VALIDATE:
 			this.imageInfos.setFaces(this.controller.getFaces());
 
-			System.out.println("/*******/" + controller.getFaces());
-
 			Intent i = new Intent(this, OptionsActivity.class);
 			i.putExtra("ImageInfos", this.imageInfos);
 			this.startActivity(i);

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="fr.ecn.ombre.android" android:versionCode="3"
+	xmlns:tools="http://schemas.android.com/tools"
+	package="fr.ecn.ombre.android"
+	android:versionCode="3"
 	android:versionName="3.0">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
@@ -30,5 +32,18 @@
 		<activity android:name="SensorActivity" />
 		<activity android:name="HorizonChoiceActivity" />
 		<activity android:name="FacesChoiceActivity" />
+
+		<provider
+			android:name="android.support.v4.content.FileProvider"
+			android:authorities="${applicationId}.my.package.name.provider"
+			android:exported="false"
+			android:grantUriPermissions="true"
+			tools:replace="android:authorities">
+
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/provider_paths"
+				tools:replace="android:resource"/>
+		</provider>
 	</application>
 </manifest>

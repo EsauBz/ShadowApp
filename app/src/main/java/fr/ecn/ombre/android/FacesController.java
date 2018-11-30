@@ -67,6 +67,7 @@ public class FacesController {
 		this.currentLine = new ScissorLine(this.scissor);
 
 		this.currentLine.setActive();
+		System.out.println(" AQUI MERENGUES SE LLAMO AL END FACE DEL PROGRAMA");
 	}
 	
 	/**
@@ -83,9 +84,8 @@ public class FacesController {
 			this.faces.add(face);
 		}
 
-		//this.faces.add(this.convertLineToFace(this.currentLine));
-		
 		this.currentLine = null;
+		System.out.println(" AQUI MERENGUES SE LLAMO AL END FACE DEL PROGRAMA");
 	}
 	
 	/**

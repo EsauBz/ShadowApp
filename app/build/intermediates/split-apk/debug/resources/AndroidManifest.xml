@@ -4,5 +4,5 @@
       android:versionCode="3"
       android:versionName="3.0"
       split="lib_resources_apk">
-	<uses-sdk android:minSdkVersion="14"/>
+	<uses-sdk android:minSdkVersion="26"/>
 </manifest>
