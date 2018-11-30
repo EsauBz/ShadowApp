@@ -631,6 +631,21 @@
             ]
         },
         {
+            "outputFile": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\debug\\values-az_values-az.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\esaud\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0.aar\\498d9bfa79f64ed805d9e160d7539ff2\\res\\values-az\\values-az.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,163,271,394,493,605,693,800,914,995,1074,1159,1266,1373,1473,1582,1686,1796,1893,1976",
+                        "endColumns": "107,107,122,98,111,87,106,113,80,78,84,106,106,99,108,103,109,96,82,100",
+                        "endOffsets": "158,266,389,488,600,688,795,909,990,1069,1154,1261,1368,1468,1577,1681,1791,1888,1971,2072"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\debug\\values-v17_values-v17.arsc.flat",
             "map": [
                 {
@@ -642,21 +657,6 @@
                         "endLines": "4,8,11,14,17,21,25,28,31,34,38,41,45,49",
                         "endColumns": "12,12,12,12,12,12,12,12,12,12,12,12,12,12",
                         "endOffsets": "223,451,609,759,931,1159,1401,1572,1746,1915,2188,2388,2592,2921"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\res\\merged\\debug\\values-az_values-az.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\esaud\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0.aar\\498d9bfa79f64ed805d9e160d7539ff2\\res\\values-az\\values-az.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,163,271,394,493,605,693,800,914,995,1074,1159,1266,1373,1473,1582,1686,1796,1893,1976",
-                        "endColumns": "107,107,122,98,111,87,106,113,80,78,84,106,106,99,108,103,109,96,82,100",
-                        "endOffsets": "158,266,389,488,600,688,795,909,990,1069,1154,1261,1368,1468,1577,1681,1791,1888,1971,2072"
                     }
                 }
             ]

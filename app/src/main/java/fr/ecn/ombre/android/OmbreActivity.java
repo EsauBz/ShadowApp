@@ -61,7 +61,7 @@ public class OmbreActivity extends Activity {
         takePictureButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                i.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, FileProvider.getUriForFile(OmbreActivity.this, BuildConfig.APPLICATION_ID, new File("/sdcard/tmp.jpg")));
+                i.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, FileProvider.getUriForFile(OmbreActivity.this, "com.my.domain.ebz.provider", new File("/sdcard/tmp.jpg")));
                 startActivityForResult(i, ACTIVITY_CAPTURE);
             }
         });
