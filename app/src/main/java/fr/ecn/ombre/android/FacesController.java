@@ -85,7 +85,7 @@ public class FacesController {
 		}
 
 		this.currentLine = null;
-		System.out.println(" AQUI MERENGUES SE LLAMO AL END FACE DEL PROGRAMA");
+
 	}
 	
 	/**

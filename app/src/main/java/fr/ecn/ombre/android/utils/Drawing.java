@@ -26,12 +26,13 @@ public class Drawing {
 	 * is green and show the possible future form of the face.
 	 */
 	public static void drawFace(Face face, Canvas canvas, Paint paint, boolean completed) {
-		//face.getPoints().add(new Point());
-		Point[] points = face.getPoints().toArray(new Point[1]);
+		//face.getPoints().add(new Point[0]);
+		//Point[] points = face.getPoints().toArray(new Point[0]);
+		Point[] points = face.getPoints().toArray(new Point[0]);
 		Path path = new Path();
-		//path.moveTo((float) points[0].getX(), (float) points[0].getY());
+		path.moveTo((float) points[0].getX(), (float) points[0].getY());
 
-		if (completed = false) {
+		if (completed == false) {
 			//we draw the unfinished face with a green line between the first point and the last selected one
 			if (face.getPoints().size()!=0) {
 
@@ -40,10 +41,13 @@ public class Drawing {
 					canvas.drawCircle((float)points[0].getX(), (float)points[0].getY(), 10, paint);
 				}
 				else {
-					for (int i = 1; i < points.length; i++) {
+					/** for (int i = 1; i < points.length; i++) {
 						Point p = points[i];
 						path.lineTo((float) p.getX(), (float) p.getY());
-					}
+					} **/
+					path.lineTo((float) points[2].getX(), (float)  points[2].getY());
+					path.lineTo((float) points[1].getX(), (float)  points[1].getY());
+					path.lineTo((float) points[3].getX(), (float)  points[3].getY());
 				}
 				canvas.drawPath(path, paint);
 
@@ -58,7 +62,8 @@ public class Drawing {
 				//We draw the line between the last added point and the first point if the face is unfinished
 				canvas.drawPath(incompletePath, incompletePicturePaint);
 			}
-		} else {
+		}
+		else {
 			//we draw the face with the same color for all the lines
 			for (int i = 1; i < points.length; i++) {
 				Point p = points[i];

@@ -28,6 +28,7 @@
 
     <!-- Resources for save info pop up-->
     <string name="cancel"> Cancel </string>
+    <string name="stringMessage">Veuilez selectionner l\'heure et le jour pour lesquel vous souhaitez visioner l\'ombre</string>
 
     <string-array name="time_step_type">
         <item>Heures</item>

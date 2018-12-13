@@ -1148,9 +1148,10 @@ int string set_mode_show_me 0x7f0c0053
 int string shadowsOnWalls 0x7f0c0054
 int string special_dates 0x7f0c0055
 int string status_bar_notification_info_overflow 0x7f0c0056
-int string time_evolution 0x7f0c0057
-int string topo 0x7f0c0058
-int string unknown 0x7f0c0059
+int string stringMessage 0x7f0c0057
+int string time_evolution 0x7f0c0058
+int string topo 0x7f0c0059
+int string unknown 0x7f0c005a
 int style AlertDialog_AppCompat 0x7f0d0000
 int style AlertDialog_AppCompat_Light 0x7f0d0001
 int style Animation_AppCompat_Dialog 0x7f0d0002

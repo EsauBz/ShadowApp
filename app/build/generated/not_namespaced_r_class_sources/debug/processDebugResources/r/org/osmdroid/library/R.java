@@ -78,7 +78,7 @@ public final class R {
         public static final int set_mode_offline = 0x7f0c0051;
         public static final int set_mode_online = 0x7f0c0052;
         public static final int set_mode_show_me = 0x7f0c0053;
-        public static final int topo = 0x7f0c0058;
-        public static final int unknown = 0x7f0c0059;
+        public static final int topo = 0x7f0c0059;
+        public static final int unknown = 0x7f0c005a;
     }
 }

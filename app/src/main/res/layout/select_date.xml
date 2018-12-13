@@ -2,20 +2,56 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical" android:layout_width="fill_parent"
 	android:layout_height="fill_parent" android:gravity="center">
-	<TextView android:textAppearance="?android:attr/textAppearanceMedium"
-		android:layout_width="wrap_content" android:id="@+id/textView1"
-		android:layout_height="wrap_content"
-		android:text="Veuilez selectionner l'heure et le jour pour lesquel vous souhaitez visioner l'ombre"
-		android:gravity="center" android:layout_margin="5dip"></TextView>
-	<DatePicker android:layout_height="wrap_content" android:id="@+id/datePicker"
-		android:layout_width="wrap_content" android:layout_margin="5dip"></DatePicker>
-	<TimePicker android:id="@+id/timePicker"
-		android:layout_height="wrap_content" android:layout_width="wrap_content"
-		android:layout_margin="5dip"></TimePicker>
-	<CheckBox android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/shadowsOnWalls" android:id="@+id/shadowsOnWalls"></CheckBox>
-	<CheckBox android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/expandToStreet" android:id="@+id/expandToStreet"></CheckBox>
-	<Button android:text="@android:string/ok" android:layout_width="wrap_content"
-		android:id="@+id/okButton" android:layout_height="wrap_content"
-		android:layout_margin="5dip"></Button>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical" >
+
+			<TextView
+				android:id="@+id/textView1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="5dip"
+				android:gravity="center"
+				android:text="@string/stringMessage"
+				android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+
+			<DatePicker
+				android:id="@+id/datePicker"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="5dip"></DatePicker>
+
+			<TimePicker
+				android:id="@+id/timePicker"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="5dip"></TimePicker>
+
+			<CheckBox
+				android:id="@+id/shadowsOnWalls"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/shadowsOnWalls"></CheckBox>
+
+			<CheckBox
+				android:id="@+id/expandToStreet"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/expandToStreet"></CheckBox>
+
+			<Button
+				android:id="@+id/okButton"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="5dip"
+				android:text="@android:string/ok"></Button>
+		</LinearLayout>
+	</ScrollView>
 
 </LinearLayout>

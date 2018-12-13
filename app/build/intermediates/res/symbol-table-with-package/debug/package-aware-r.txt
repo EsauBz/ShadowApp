@@ -1149,6 +1149,7 @@ string set_mode_show_me
 string shadowsOnWalls
 string special_dates
 string status_bar_notification_info_overflow
+string stringMessage
 string time_evolution
 string topo
 string unknown
