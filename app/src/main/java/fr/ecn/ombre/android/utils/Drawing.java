@@ -53,7 +53,7 @@ public class Drawing {
 
 				//this paint is used to set the color of the line between the last added point and the first point 
 				Paint incompletePicturePaint = new Paint();
-				incompletePicturePaint.setColor(Color.GREEN);
+				incompletePicturePaint.setColor(Color.YELLOW);
 				incompletePicturePaint.setStyle(Paint.Style.STROKE);
 				Path incompletePath = new Path();
 				incompletePath.moveTo((float) points[0].getX(), (float) points[0].getY());
@@ -65,11 +65,10 @@ public class Drawing {
 		}
 		else {
 			//we draw the face with the same color for all the lines
-			for (int i = 1; i < points.length; i++) {
-				Point p = points[i];
-				path.lineTo((float) p.getX(), (float) p.getY());
-			}
-			path.lineTo((float) points[0].getX(), (float) points[0].getY());
+            path.lineTo((float) points[2].getX(), (float)  points[2].getY());
+            path.lineTo((float) points[1].getX(), (float)  points[1].getY());
+            path.lineTo((float) points[3].getX(), (float)  points[3].getY());
+            path.lineTo((float) points[0].getX(), (float) points[0].getY());
 			canvas.drawPath(path, paint);
 		}
 	}

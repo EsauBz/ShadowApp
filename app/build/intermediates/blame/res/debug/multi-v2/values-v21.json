@@ -1,10 +1,29 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\esaud\\Documents\\GitHub\\ShadowApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "C:\\Users\\guiishida\\CENTRALE NANTES\\Informatique\\Projets\\PAPPL\\ShadowApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\esaud\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.0.0.aar\\d0bae76e4bea13acfa7877715e16fd7b\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\guiishida\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.0.0.aar\\f9a417fdbb8c20c4457bc1dcafa48fd1\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,159,223,290,354,470,596,722,850,1022",
+                        "endLines": "2,3,4,5,6,7,8,9,12,17",
+                        "endColumns": "103,63,66,63,115,125,125,127,12,12",
+                        "endOffsets": "154,218,285,349,465,591,717,845,1017,1355"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,283,284,291,295,299,302",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,159,223,290,20759,20875,21332,21626,21921,22093",
+                        "endLines": "2,3,4,5,283,284,291,295,301,306",
+                        "endColumns": "103,63,66,63,115,125,125,127,12,12",
+                        "endOffsets": "154,218,285,349,20870,20996,21453,21749,22088,22426"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\guiishida\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.0.0.aar\\3639fd71b801e2264a84ee433dfe3419\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,5,8,11",
                         "startColumns": "4,4,4,4",
@@ -23,7 +42,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\esaud\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0.aar\\498d9bfa79f64ed805d9e160d7539ff2\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\guiishida\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0.aar\\52e870166e06c45415afc8381c11334b\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,19,20,21,22,24,26,27,28,29,30,32,34,36,38,40,42,43,48,50,52,53,54,56,58,59,60,61,62,63,107,110,154,157,160,162,164,166,169,171,174,175,176,179,180,181,182,183,184,187,188,190,192,194,196,200,202,203,204,205,207,211,213,215,216,217,218,219,221,222,223,233,234,235,247,259,260,261,264,267,268,271,272",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -42,7 +61,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\esaud\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.0.0.aar\\79c7604a653a7f35166ca4f09a4b2ce1\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\guiishida\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.0.0.aar\\79633f53069f097e053a03181e9e212f\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,5",
                         "startColumns": "4,4",
@@ -58,25 +77,6 @@
                         "endLines": "166,228",
                         "endColumns": "12,96",
                         "endOffsets": "12783,17219"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\esaud\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.0.0.aar\\e39e13d9a1656f4cba947824db0cdebc\\res\\values-v21\\values-v21.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,13",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,223,290,354,470,596,722,850,1022",
-                        "endLines": "2,3,4,5,6,7,8,9,12,17",
-                        "endColumns": "103,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "154,218,285,349,465,591,717,845,1017,1355"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,283,284,291,295,299,302",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,223,290,20759,20875,21332,21626,21921,22093",
-                        "endLines": "2,3,4,5,283,284,291,295,301,306",
-                        "endColumns": "103,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "154,218,285,349,20870,20996,21453,21749,22088,22426"
                     }
                 }
             ]
